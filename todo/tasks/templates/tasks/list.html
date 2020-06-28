@@ -6,8 +6,9 @@
     <input type = "submit" name = "Create Task">
 </form>
 
-{% for tasks in tasks %}
+{% for task in tasks %}
     <div>
-        <p>{{tasks}}</p>
+        <a href="{% url 'update_task' task.id %}">Update</a>
+        <p>{{task}}</p>
     </div>
 {% endfor %}
